@@ -1,0 +1,288 @@
+:root {
+  --gradient-shadow: linear-gradient(
+    143deg,
+    #ff0000,
+    #fdff00,
+    #05ff00,
+    #00fffd,
+    #0020ff,
+    #fa00ff
+  );
+
+  --gradient-shadow2: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  cursor: none;
+}
+
+body {
+  background-color: rgb(29, 29, 29);
+  height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+
+  transform: translate(-11%, -11%) rotateY(180deg);
+
+  pointer-events: none;
+
+  background-image: url(../img/icons8-minecraft-sword-48.png);
+}
+
+.pickaxe {
+  background-image: url(../img/icons8-minecraft-pickaxe-48.png);
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contextmenu {
+  position: absolute;
+  z-index: 1000;
+
+  width: 130px;
+  height: 225px;
+  border: 1.5px solid rgba(211, 208, 255, 0.204);
+  background-color: rgb(25, 28, 34);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.btns {
+  width: 80%;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  color: #fff;
+}
+
+.redbtn {
+  background: red;
+}
+.greenbtn {
+  background: green;
+}
+.bluebtn {
+  background: blue;
+}
+
+/*! =======================keyboard==========================  */
+
+#theKeyBoard {
+  width: 98%;
+  margin: 50px auto;
+}
+
+.box {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px 3px rgb(115, 0, 0);
+  background-color: black;
+  transition: 0.2s all;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*? ===================== ROW ================================  */
+
+.row {
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+.white-back {
+  background-image: url(../img/icons8-power-off-button-38.png);
+  background-color: black;
+  background-position: center;
+}
+/*? ===================== ROW2 ================================  */
+
+.Backspace {
+  width: 120px;
+}
+/*? ===================== ROW3 ================================  */
+
+.tab,
+.slash {
+  width: 80px;
+}
+
+.plus {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  box-shadow: 0px 0px 0px 0px rgb(115, 0, 0);
+  transition: 0.2s all;
+}
+.plus__inner {
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+/*? ===================== ROW4 ================================  */
+
+.caps {
+  width: 80px;
+}
+.enter {
+  width: 130px;
+}
+
+/*? ===================== ROW5 ================================  */
+.shift{
+  width: 105px;
+}
+.enter-num {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 0px rgb(115, 0, 0);
+  transition: 0.2s all;
+}
+.enter__inner {
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+/*? ===================== ROW6 ================================  */
+.space{
+  width: 240px;
+}
+.ctrl{
+  width: 80px;
+}
+
+/** ========================= special box =========================  */
+
+.WASD {
+  z-index: 1;
+}
+
+.wasd {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: linear-gradient(0deg, #000, #262626);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wasd:before,
+.shadow:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border-radius: 3px;
+  background: var(--gradient-shadow2);
+  background-size: 400%;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.wasd:after {
+  filter: blur(20px);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.noe {
+  background: transparent;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+/*! ================================ANIMATE================================ */
+p {
+  text-align: center;
+
+  background: linear-gradient(
+    143deg,
+    #ff0000 5%,
+    #fdff00 25%,
+    #05ff00 45%,
+    #00fffd 65%,
+    #0020ff 85%,
+    #fa00ff 95%
+  );
+
+  background: var(--gradient-shadow2);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 5s linear infinite;
+  animation: animate 20s linear infinite;
+}
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
