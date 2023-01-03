@@ -130,7 +130,6 @@ body {
 }
 
 .white-back {
-  background-image: url(../img/icons8-power-off-button-38.png);
   background-color: black;
   background-position: center;
 }
@@ -170,7 +169,7 @@ body {
 }
 
 /*? ===================== ROW5 ================================  */
-.shift{
+.shift {
   width: 105px;
 }
 .enter-num {
@@ -188,10 +187,10 @@ body {
   left: -5px;
 }
 /*? ===================== ROW6 ================================  */
-.space{
+.space {
   width: 240px;
 }
-.ctrl{
+.ctrl {
   width: 80px;
 }
 
