@@ -31,7 +31,7 @@ menu.addEventListener('click', (e) => {
 })
 
 window.addEventListener("contextmenu", (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     document.body.prepend(layerOfMenu);
 
     layerOfMenu.style.display = 'block';
